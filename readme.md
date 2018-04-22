@@ -5,9 +5,9 @@
 This is a sample web component library that contains some simple weather related widgets. This library contains the following components:
 
 * Simple
-  * **kws-tempurature** - takes a tempurature in Kelvin and displays the value in either Celcius or Fahrenheit
+  * **kws-temperature** - takes a temperature in Kelvin and displays the value in either Celcius or Fahrenheit
   * **kws-uv-index** - takes a UV Index value and displays the value with a description and color coding
   * **kws-condition** - given a mapping of condition types to image URLs and a condition code, determines which code to use and displays the image with a label
 * Compound
-  * **kws-current-tempurature** - city, temperature, condition
+  * **kws-current-temperature** - city, temperature, condition
   * **kws-daily-forecast** - condition, date, low, high

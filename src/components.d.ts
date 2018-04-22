@@ -27,33 +27,33 @@ declare global {
 declare global {
 
   namespace StencilComponents {
-    interface MyComponent {
-      'first': string;
-      'last': string;
+    interface KwsTemperature {
+      'scale': string;
+      'temperature': number;
     }
   }
 
-  interface HTMLMyComponentElement extends StencilComponents.MyComponent, HTMLStencilElement {}
+  interface HTMLKwsTemperatureElement extends StencilComponents.KwsTemperature, HTMLStencilElement {}
 
-  var HTMLMyComponentElement: {
-    prototype: HTMLMyComponentElement;
-    new (): HTMLMyComponentElement;
+  var HTMLKwsTemperatureElement: {
+    prototype: HTMLKwsTemperatureElement;
+    new (): HTMLKwsTemperatureElement;
   };
   interface HTMLElementTagNameMap {
-    'my-component': HTMLMyComponentElement;
+    'kws-temperature': HTMLKwsTemperatureElement;
   }
   interface ElementTagNameMap {
-    'my-component': HTMLMyComponentElement;
+    'kws-temperature': HTMLKwsTemperatureElement;
   }
   namespace JSX {
     interface IntrinsicElements {
-      'my-component': JSXElements.MyComponentAttributes;
+      'kws-temperature': JSXElements.KwsTemperatureAttributes;
     }
   }
   namespace JSXElements {
-    export interface MyComponentAttributes extends HTMLAttributes {
-      'first'?: string;
-      'last'?: string;
+    export interface KwsTemperatureAttributes extends HTMLAttributes {
+      'scale'?: string;
+      'temperature'?: number;
     }
   }
 }
