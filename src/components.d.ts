@@ -58,4 +58,37 @@ declare global {
   }
 }
 
+
+declare global {
+
+  namespace StencilComponents {
+    interface KwsUvIndex {
+      'index': number;
+    }
+  }
+
+  interface HTMLKwsUvIndexElement extends StencilComponents.KwsUvIndex, HTMLStencilElement {}
+
+  var HTMLKwsUvIndexElement: {
+    prototype: HTMLKwsUvIndexElement;
+    new (): HTMLKwsUvIndexElement;
+  };
+  interface HTMLElementTagNameMap {
+    'kws-uv-index': HTMLKwsUvIndexElement;
+  }
+  interface ElementTagNameMap {
+    'kws-uv-index': HTMLKwsUvIndexElement;
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      'kws-uv-index': JSXElements.KwsUvIndexAttributes;
+    }
+  }
+  namespace JSXElements {
+    export interface KwsUvIndexAttributes extends HTMLAttributes {
+      'index'?: number;
+    }
+  }
+}
+
 declare global { namespace JSX { interface StencilJSX {} } }

@@ -1,7 +1,7 @@
-import { flush, render, TestWindow } from '@stencil/core/testing';
+import { TestWindow } from '@stencil/core/testing';
 import { KwsTemperature } from './kws-temperature';
 
-describe('my-component', () => {
+describe('kws-temperature', () => {
   it('should build', () => {
     expect(new KwsTemperature()).toBeTruthy();
   });

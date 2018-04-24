@@ -1,0 +1,19 @@
+.low-risk {
+  color: #4f912a;
+}
+
+.moderate-risk {
+  color: #F5E24D;
+}
+
+.high-risk {
+  color: #E5632B;
+}
+
+.very-high-risk {
+  color: #C52A2A;
+}
+
+.extreme-risk {
+  color: #6350C1;
+}
