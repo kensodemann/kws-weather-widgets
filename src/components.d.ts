@@ -23,6 +23,44 @@ declare global {
   interface HTMLAttributes {}
 }
 
+import {
+  KwsConditionIconPaths,
+} from './components/kws-condition/kws-condition-icon-paths';
+
+declare global {
+
+  namespace StencilComponents {
+    interface KwsCondition {
+      'condition': number;
+      'iconPaths': KwsConditionIconPaths;
+    }
+  }
+
+  interface HTMLKwsConditionElement extends StencilComponents.KwsCondition, HTMLStencilElement {}
+
+  var HTMLKwsConditionElement: {
+    prototype: HTMLKwsConditionElement;
+    new (): HTMLKwsConditionElement;
+  };
+  interface HTMLElementTagNameMap {
+    'kws-condition': HTMLKwsConditionElement;
+  }
+  interface ElementTagNameMap {
+    'kws-condition': HTMLKwsConditionElement;
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      'kws-condition': JSXElements.KwsConditionAttributes;
+    }
+  }
+  namespace JSXElements {
+    export interface KwsConditionAttributes extends HTMLAttributes {
+      'condition'?: number;
+      'iconPaths'?: KwsConditionIconPaths;
+    }
+  }
+}
+
 
 declare global {
 
