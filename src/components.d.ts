@@ -24,15 +24,15 @@ declare global {
 }
 
 import {
-  KwsConditionIconPaths,
-} from './components/kws-condition/kws-condition-icon-paths';
+  ConditionIconPaths,
+} from './models/condition-icon-paths';
 
 declare global {
 
   namespace StencilComponents {
     interface KwsCondition {
       'condition': number;
-      'iconPaths': KwsConditionIconPaths;
+      'iconPaths': ConditionIconPaths;
     }
   }
 
@@ -56,7 +56,7 @@ declare global {
   namespace JSXElements {
     export interface KwsConditionAttributes extends HTMLAttributes {
       'condition'?: number;
-      'iconPaths'?: KwsConditionIconPaths;
+      'iconPaths'?: ConditionIconPaths;
     }
   }
 }

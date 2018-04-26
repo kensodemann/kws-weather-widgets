@@ -1,7 +1,7 @@
 import { TestWindow } from '@stencil/core/testing';
 import { KwsCondition } from './kws-condition';
 
-import { KwsConditionIconPaths } from './kws-condition-icon-paths';
+import { ConditionIconPaths } from '../../models/condition-icon-paths';
 
 describe('kws-condition', () => {
   it('should build', () => {
@@ -24,7 +24,7 @@ describe('kws-condition', () => {
     });
 
     describe('image', () => {
-      let paths: KwsConditionIconPaths;
+      let paths: ConditionIconPaths;
       beforeEach(() => {
         paths = {
           sunny: './imgs/sunny.png',

@@ -1,4 +1,4 @@
-export interface KwsConditionIconPaths {
+export interface ConditionIconPaths {
   sunny: string;
   cloudy: string;
   lightRain: string;
