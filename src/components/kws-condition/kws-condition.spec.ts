@@ -9,7 +9,7 @@ describe('kws-condition', () => {
   });
 
   describe('rendering', () => {
-    let element: HTMLElement;
+    let element: HTMLKwsConditionElement;
     let window: TestWindow;
     beforeEach(async () => {
       window = new TestWindow();
@@ -40,151 +40,151 @@ describe('kws-condition', () => {
       });
 
       it('shows thunderstorms for 200', async () => {
-        (element as any).iconPaths = paths;
-        (element as any).condition = 200;
+        element.iconPaths = paths;
+        element.condition = 200;
         await window.flush();
         let els = element.getElementsByTagName('img');
         expect(els[0].getAttribute('src')).toEqual(paths.thunderStorm);
       });
 
       it('shows thunderstorms for 229', async () => {
-        (element as any).iconPaths = paths;
-        (element as any).condition = 229;
+        element.iconPaths = paths;
+        element.condition = 229;
         await window.flush();
         let els = element.getElementsByTagName('img');
         expect(els[0].getAttribute('src')).toEqual(paths.thunderStorm);
       });
 
       it('shows sunny thunderstorms for 230', async () => {
-        (element as any).iconPaths = paths;
-        (element as any).condition = 230;
+        element.iconPaths = paths;
+        element.condition = 230;
         await window.flush();
         let els = element.getElementsByTagName('img');
         expect(els[0].getAttribute('src')).toEqual(paths.sunnyThunderStorm);
       });
 
       it('shows sunny thunderstorms for 299', async () => {
-        (element as any).iconPaths = paths;
-        (element as any).condition = 299;
+        element.iconPaths = paths;
+        element.condition = 299;
         await window.flush();
         let els = element.getElementsByTagName('img');
         expect(els[0].getAttribute('src')).toEqual(paths.sunnyThunderStorm);
       });
 
       it('shows light rain for 300', async () => {
-        (element as any).iconPaths = paths;
-        (element as any).condition = 300;
+        element.iconPaths = paths;
+        element.condition = 300;
         await window.flush();
         let els = element.getElementsByTagName('img');
         expect(els[0].getAttribute('src')).toEqual(paths.lightRain);
       });
 
       it('shows light rain for 399', async () => {
-        (element as any).iconPaths = paths;
-        (element as any).condition = 399;
+        element.iconPaths = paths;
+        element.condition = 399;
         await window.flush();
         let els = element.getElementsByTagName('img');
         expect(els[0].getAttribute('src')).toEqual(paths.lightRain);
       });
 
       it('shows showers for 500', async () => {
-        (element as any).iconPaths = paths;
-        (element as any).condition = 500;
+        element.iconPaths = paths;
+        element.condition = 500;
         await window.flush();
         let els = element.getElementsByTagName('img');
         expect(els[0].getAttribute('src')).toEqual(paths.shower);
       });
 
       it('shows showers for 599', async () => {
-        (element as any).iconPaths = paths;
-        (element as any).condition = 599;
+        element.iconPaths = paths;
+        element.condition = 599;
         await window.flush();
         let els = element.getElementsByTagName('img');
         expect(els[0].getAttribute('src')).toEqual(paths.shower);
       });
 
       it('shows snow for 600', async () => {
-        (element as any).iconPaths = paths;
-        (element as any).condition = 600;
+        element.iconPaths = paths;
+        element.condition = 600;
         await window.flush();
         let els = element.getElementsByTagName('img');
         expect(els[0].getAttribute('src')).toEqual(paths.snow);
       });
 
       it('shows snow for 699', async () => {
-        (element as any).iconPaths = paths;
-        (element as any).condition = 699;
+        element.iconPaths = paths;
+        element.condition = 699;
         await window.flush();
         let els = element.getElementsByTagName('img');
         expect(els[0].getAttribute('src')).toEqual(paths.snow);
       });
 
       it('shows snow for 903', async () => {
-        (element as any).iconPaths = paths;
-        (element as any).condition = 903;
+        element.iconPaths = paths;
+        element.condition = 903;
         await window.flush();
         let els = element.getElementsByTagName('img');
         expect(els[0].getAttribute('src')).toEqual(paths.snow);
       });
 
       it('shows fog for 701', async () => {
-        (element as any).iconPaths = paths;
-        (element as any).condition = 701;
+        element.iconPaths = paths;
+        element.condition = 701;
         await window.flush();
         let els = element.getElementsByTagName('img');
         expect(els[0].getAttribute('src')).toEqual(paths.fog);
       });
 
       it('shows fog for 771', async () => {
-        (element as any).iconPaths = paths;
-        (element as any).condition = 771;
+        element.iconPaths = paths;
+        element.condition = 771;
         await window.flush();
         let els = element.getElementsByTagName('img');
         expect(els[0].getAttribute('src')).toEqual(paths.fog);
       });
 
       it('shows sunny for 800', async () => {
-        (element as any).iconPaths = paths;
-        (element as any).condition = 800;
+        element.iconPaths = paths;
+        element.condition = 800;
         await window.flush();
         let els = element.getElementsByTagName('img');
         expect(els[0].getAttribute('src')).toEqual(paths.sunny);
       });
 
       it('shows sunny for 904', async () => {
-        (element as any).iconPaths = paths;
-        (element as any).condition = 904;
+        element.iconPaths = paths;
+        element.condition = 904;
         await window.flush();
         let els = element.getElementsByTagName('img');
         expect(els[0].getAttribute('src')).toEqual(paths.sunny);
       });
 
       it('shows cloudy for 801', async () => {
-        (element as any).iconPaths = paths;
-        (element as any).condition = 801;
+        element.iconPaths = paths;
+        element.condition = 801;
         await window.flush();
         let els = element.getElementsByTagName('img');
         expect(els[0].getAttribute('src')).toEqual(paths.cloudy);
       });
 
       it('shows cloudy for 809', async () => {
-        (element as any).iconPaths = paths;
-        (element as any).condition = 809;
+        element.iconPaths = paths;
+        element.condition = 809;
         await window.flush();
         let els = element.getElementsByTagName('img');
         expect(els[0].getAttribute('src')).toEqual(paths.cloudy);
       });
 
       it('shows unknown for 810', async () => {
-        (element as any).iconPaths = paths;
-        (element as any).condition = 810;
+        element.iconPaths = paths;
+        element.condition = 810;
         await window.flush();
         let els = element.getElementsByTagName('img');
         expect(els[0].getAttribute('src')).toEqual(paths.unknown);
       });
 
       it('shows nothing if there is no image map', async () => {
-        (element as any).condition = 810;
+        element.condition = 810;
         await window.flush();
         let els = element.getElementsByTagName('img');
         expect(els.length).toEqual(0);
@@ -193,126 +193,126 @@ describe('kws-condition', () => {
 
     describe('description', () => {
       it('shows thunderstorms for 200', async () => {
-        (element as any).condition = 200;
+        element.condition = 200;
         await window.flush();
         let els = element.getElementsByClassName('condition-label');
         expect(els[0].textContent).toEqual('Thunderstorms');
       });
 
       it('shows thunderstorms for 229', async () => {
-        (element as any).condition = 229;
+        element.condition = 229;
         await window.flush();
         let els = element.getElementsByClassName('condition-label');
         expect(els[0].textContent).toEqual('Thunderstorms');
       });
 
       it('shows scattered storms for 230', async () => {
-        (element as any).condition = 230;
+        element.condition = 230;
         await window.flush();
         let els = element.getElementsByClassName('condition-label');
         expect(els[0].textContent).toEqual('Scattered Storms');
       });
 
       it('shows scattered storms for 299', async () => {
-        (element as any).condition = 299;
+        element.condition = 299;
         await window.flush();
         let els = element.getElementsByClassName('condition-label');
         expect(els[0].textContent).toEqual('Scattered Storms');
       });
 
       it('shows rain for 300', async () => {
-        (element as any).condition = 300;
+        element.condition = 300;
         await window.flush();
         let els = element.getElementsByClassName('condition-label');
         expect(els[0].textContent).toEqual('Rain');
       });
 
       it('shows rain for 399', async () => {
-        (element as any).condition = 399;
+        element.condition = 399;
         await window.flush();
         let els = element.getElementsByClassName('condition-label');
         expect(els[0].textContent).toEqual('Rain');
       });
 
       it('shows showers for 500', async () => {
-        (element as any).condition = 500;
+        element.condition = 500;
         await window.flush();
         let els = element.getElementsByClassName('condition-label');
         expect(els[0].textContent).toEqual('Showers');
       });
 
       it('shows showers for 599', async () => {
-        (element as any).condition = 599;
+        element.condition = 599;
         await window.flush();
         let els = element.getElementsByClassName('condition-label');
         expect(els[0].textContent).toEqual('Showers');
       });
 
       it('shows snow for 600', async () => {
-        (element as any).condition = 600;
+        element.condition = 600;
         await window.flush();
         let els = element.getElementsByClassName('condition-label');
         expect(els[0].textContent).toEqual('Snow');
       });
 
       it('shows snow for 699', async () => {
-        (element as any).condition = 699;
+        element.condition = 699;
         await window.flush();
         let els = element.getElementsByClassName('condition-label');
         expect(els[0].textContent).toEqual('Snow');
       });
 
       it('shows snow for 903', async () => {
-        (element as any).condition = 903;
+        element.condition = 903;
         await window.flush();
         let els = element.getElementsByClassName('condition-label');
         expect(els[0].textContent).toEqual('Snow');
       });
 
       it('shows fog for 701', async () => {
-        (element as any).condition = 701;
+        element.condition = 701;
         await window.flush();
         let els = element.getElementsByClassName('condition-label');
         expect(els[0].textContent).toEqual('Fog');
       });
 
       it('shows fog for 771', async () => {
-        (element as any).condition = 771;
+        element.condition = 771;
         await window.flush();
         let els = element.getElementsByClassName('condition-label');
         expect(els[0].textContent).toEqual('Fog');
       });
 
       it('shows sunny for 800', async () => {
-        (element as any).condition = 800;
+        element.condition = 800;
         await window.flush();
         let els = element.getElementsByClassName('condition-label');
         expect(els[0].textContent).toEqual('Sunny');
       });
 
       it('shows sunny for 904', async () => {
-        (element as any).condition = 904;
+        element.condition = 904;
         await window.flush();
         let els = element.getElementsByClassName('condition-label');
         expect(els[0].textContent).toEqual('Sunny');
       });
 
       it('shows cloudy for 801', async () => {
-        (element as any).condition = 801;
+        element.condition = 801;
         await window.flush();
         let els = element.getElementsByClassName('condition-label');
         expect(els[0].textContent).toEqual('Cloudy');
       });
 
       it('shows cloudy for 809', async () => {
-        (element as any).condition = 809;
+        element.condition = 809;
         await window.flush();
         let els = element.getElementsByClassName('condition-label');
         expect(els[0].textContent).toEqual('Cloudy');
       });
 
       it('shows unknown for 810', async () => {
-        (element as any).condition = 810;
+        element.condition = 810;
         await window.flush();
         let els = element.getElementsByClassName('condition-label');
         expect(els[0].textContent).toEqual('Unknown');
