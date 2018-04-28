@@ -190,7 +190,9 @@ describe('Weather Condition Service', () => {
 
     it('is Scattered Storms for 230 through 299', () => {
       for (let x = 230; x < 300; x++) {
-        expect(weatherCondition.imageUrl(x, paths)).toEqual(paths.sunnyThunderStorm);
+        expect(weatherCondition.imageUrl(x, paths)).toEqual(
+          paths.sunnyThunderStorm
+        );
       }
     });
 
@@ -208,6 +210,159 @@ describe('Weather Condition Service', () => {
 
     it('is Snow for 903', () => {
       expect(weatherCondition.imageUrl(903, paths)).toEqual(paths.snow);
+    });
+  });
+
+  describe('high', () => {
+    it('is undefined if there are no forecasts', () => {
+      expect(weatherCondition.high(null)).toBeUndefined();
+      expect(weatherCondition.high(undefined)).toBeUndefined();
+      expect(weatherCondition.high([])).toBeUndefined();
+    });
+
+    it('returns the highest temperature', () => {
+      expect(
+        weatherCondition.high([
+          {
+            condition: 800,
+            temperature: 287.15
+          },
+          {
+            condition: 800,
+            temperature: 286.65
+          },
+          {
+            condition: 801,
+            temperature: 289.65
+          },
+          {
+            condition: 801,
+            temperature: 290.65
+          },
+          {
+            condition: 801,
+            temperature: 295.15
+          },
+          {
+            condition: 305,
+            temperature: 297.15
+          },
+          {
+            condition: 800,
+            temperature: 295.65
+          },
+          {
+            condition: 800,
+            temperature: 293.65
+          },
+          {
+            condition: 800,
+            temperature: 288.65
+          }
+        ])
+      ).toEqual(297.15);
+    });
+  });
+
+  describe('low', () => {
+    it('is undefined if there are no forecasts', () => {
+      expect(weatherCondition.low(null)).toBeUndefined();
+      expect(weatherCondition.low(undefined)).toBeUndefined();
+      expect(weatherCondition.low([])).toBeUndefined();
+    });
+
+    it('returns the lowest temperature', () => {
+      expect(
+        weatherCondition.low([
+          {
+            condition: 800,
+            temperature: 287.15
+          },
+          {
+            condition: 800,
+            temperature: 286.65
+          },
+          {
+            condition: 801,
+            temperature: 289.65
+          },
+          {
+            condition: 801,
+            temperature: 290.65
+          },
+          {
+            condition: 801,
+            temperature: 295.15
+          },
+          {
+            condition: 305,
+            temperature: 297.15
+          },
+          {
+            condition: 800,
+            temperature: 295.65
+          },
+          {
+            condition: 800,
+            temperature: 293.65
+          },
+          {
+            condition: 800,
+            temperature: 288.65
+          }
+        ])
+      ).toEqual(286.65);
+    });
+  });
+
+  describe('most serious condition', () => {
+    it('is undefined if there are no forecasts', () => {
+      expect(weatherCondition.mostSeriousCondition(null)).toBeUndefined();
+      expect(weatherCondition.mostSeriousCondition(undefined)).toBeUndefined();
+      expect(weatherCondition.mostSeriousCondition([])).toBeUndefined();
+    });
+
+    it('returns the most serious condition', () => {
+      expect(
+        weatherCondition.mostSeriousCondition([
+          {
+            condition: 800,
+            temperature: 287.15
+          },
+          {
+            condition: 800,
+            temperature: 286.65
+          },
+          {
+            condition: 801,
+            temperature: 289.65
+          },
+          {
+            condition: 801,
+            temperature: 290.65
+          },
+          {
+            condition: 801,
+            temperature: 295.15
+          },
+          {
+            condition: 305,
+            temperature: 297.15
+          },
+          {
+            condition: 800,
+            temperature: 295.65
+          },
+          {
+            condition: 800,
+            temperature: 293.65
+          },
+          {
+            condition: 800,
+            temperature: 288.65
+          }
+        ])
+      ).toEqual(305);
     });
   });
 });

@@ -26,6 +26,9 @@ declare global {
 import {
   ConditionIconPaths,
 } from './models/condition-icon-paths';
+import {
+  Forecast,
+} from './models/forecast';
 
 declare global {
 
@@ -57,6 +60,43 @@ declare global {
     export interface KwsConditionAttributes extends HTMLAttributes {
       'condition'?: number;
       'iconPaths'?: ConditionIconPaths;
+    }
+  }
+}
+
+
+declare global {
+
+  namespace StencilComponents {
+    interface KwsDailyForecast {
+      'forecasts': Array<Forecast>;
+      'iconPaths': ConditionIconPaths;
+      'scale': string;
+    }
+  }
+
+  interface HTMLKwsDailyForecastElement extends StencilComponents.KwsDailyForecast, HTMLStencilElement {}
+
+  var HTMLKwsDailyForecastElement: {
+    prototype: HTMLKwsDailyForecastElement;
+    new (): HTMLKwsDailyForecastElement;
+  };
+  interface HTMLElementTagNameMap {
+    'kws-daily-forecast': HTMLKwsDailyForecastElement;
+  }
+  interface ElementTagNameMap {
+    'kws-daily-forecast': HTMLKwsDailyForecastElement;
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      'kws-daily-forecast': JSXElements.KwsDailyForecastAttributes;
+    }
+  }
+  namespace JSXElements {
+    export interface KwsDailyForecastAttributes extends HTMLAttributes {
+      'forecasts'?: Array<Forecast>;
+      'iconPaths'?: ConditionIconPaths;
+      'scale'?: string;
     }
   }
 }

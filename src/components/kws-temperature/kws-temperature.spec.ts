@@ -7,8 +7,8 @@ describe('kws-temperature', () => {
   });
 
   describe('rendering', () => {
-    let element;
-    let window;
+    let element: HTMLElement;
+    let window: TestWindow;
     beforeEach(async () => {
       window = new TestWindow();
       element = await window.load({
@@ -22,7 +22,7 @@ describe('kws-temperature', () => {
     });
 
     describe('using a scale of C', () => {
-      beforeEach(() => (element.scale = 'C'));
+      beforeEach(() => ((element as any).scale = 'C'));
 
       it('shows degrees Celcius', async () => {
         await window.flush();
@@ -30,32 +30,32 @@ describe('kws-temperature', () => {
       });
 
       it('converts negative temps properly', async () => {
-        element.temperature = 254.55;
+        (element as any).temperature = 254.55;
         await window.flush();
         expect(element.textContent.trim()).toEqual('-19 ℃');
       });
 
       it('converts freezing properly', async () => {
-        element.temperature = 273.15;
+        (element as any).temperature = 273.15;
         await window.flush();
         expect(element.textContent.trim()).toEqual('0 ℃');
       });
 
       it('converts normal tempurature properly', async () => {
-        element.temperature = 300.9;
+        (element as any).temperature = 300.9;
         await window.flush();
         expect(element.textContent.trim()).toEqual('28 ℃');
       });
 
       it('converts boiling properly', async () => {
-        element.temperature = 373.15;
+        (element as any).temperature = 373.15;
         await window.flush();
         expect(element.textContent.trim()).toEqual('100 ℃');
       });
     });
 
     describe('using a scale of F', () => {
-      beforeEach(() => (element.scale = 'F'));
+      beforeEach(() => ((element as any).scale = 'F'));
 
       it('shows degrees Fahrenheit', async () => {
         await window.flush();
@@ -63,25 +63,25 @@ describe('kws-temperature', () => {
       });
 
       it('converts negative temps properly', async () => {
-        element.temperature = 254.55;
+        (element as any).temperature = 254.55;
         await window.flush();
         expect(element.textContent.trim()).toEqual('-1 ℉');
       });
 
       it('converts freezing properly', async () => {
-        element.temperature = 273.15;
+        (element as any).temperature = 273.15;
         await window.flush();
         expect(element.textContent.trim()).toEqual('32 ℉');
       });
 
       it('converts normal tempurature properly', async () => {
-        element.temperature = 300.9;
+        (element as any).temperature = 300.9;
         await window.flush();
         expect(element.textContent.trim()).toEqual('82 ℉');
       });
 
       it('converts boiling properly', async () => {
-        element.temperature = 373.15;
+        (element as any).temperature = 373.15;
         await window.flush();
         expect(element.textContent.trim()).toEqual('212 ℉');
       });

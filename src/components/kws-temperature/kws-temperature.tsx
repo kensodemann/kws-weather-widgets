@@ -23,12 +23,12 @@ export class KwsTemperature {
 
   render() {
     return (
-      <div>
+      <span>
         {this.scale === 'C'
           ? this.celcius(this.temperature)
           : this.fahrenheit(this.temperature)}{' '}
         {this.scale === 'C' ? '℃' : '℉'}
-      </div>
+      </span>
     );
   }
 }
