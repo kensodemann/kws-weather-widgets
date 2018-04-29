@@ -9,5 +9,4 @@ This is a sample web component library that contains some simple weather related
   * **kws-uv-index** - takes a UV Index value and displays the value with a description and color coding
   * **kws-condition** - given a mapping of condition types to image URLs and a condition code, determines which code to use and displays the image with a label
 * Compound
-  * **kws-current-temperature** - city, temperature, condition
   * **kws-daily-forecast** - condition, date, low, high

@@ -1,6 +1,6 @@
 {
   "name": "kws-weather-widgets",
-  "version": "0.1.0",
+  "version": "0.0.0",
   "description": "Demonstration Weather Widgets",
   "main": "dist/kwsweather.js",
   "types": "dist/types/components.d.ts",
@@ -11,7 +11,10 @@
   "browser": "dist/kwsweather.js",
   "scripts": {
     "build": "stencil build",
+    "bump": "node scripts/bump-version.js",
+    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s",
     "dev": "sd concurrent \"stencil build --dev --watch\" \"stencil-dev-server\" ",
+    "release": "node scripts/release.js",
     "serve": "stencil-dev-server",
     "start": "npm run dev",
     "test": "jest --no-cache",
@@ -23,11 +26,18 @@
     "@stencil/dev-server": "latest",
     "@stencil/utils": "latest",
     "@types/jest": "^21.1.1",
-    "jest": "^21.2.1"
+    "chalk": "^2.4.1",
+    "conventional-changelog": "^1.1.24",
+    "execa": "^0.10.0",
+    "inquirer": "^5.2.0",
+    "jest": "^21.2.1",
+    "listr": "^0.14.0",
+    "rimraf": "^2.6.2",
+    "semver": "^5.5.0"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ionic-team/stencil-component-starter.git"
+    "url": "git+https://github.com/kensodemann/kws-weather-widgets.git"
   },
   "author": "Ken Sodemann <ken@ionic.io>",
   "license": "MIT",
