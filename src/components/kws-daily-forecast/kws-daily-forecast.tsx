@@ -1,4 +1,4 @@
-import { Component, Prop } from '@stencil/core';
+import { Component, Prop, Watch } from '@stencil/core';
 import { ConditionIconPaths } from '../../models/condition-icon-paths';
 import { Forecast } from '../../models/forecast';
 import { WeatherCondition } from '../../services/weather-condition/weather-condition';
@@ -13,33 +13,42 @@ export class KwsDailyForecast {
   @Prop() iconPaths: ConditionIconPaths;
   @Prop() scale: string;
 
+  private condition: number;
+  private iconUrl: string;
   private weatherCondition: WeatherCondition;
 
   constructor() {
     this.weatherCondition = new WeatherCondition();
   }
 
-  private iconUrl(): string{
-    if (this.iconPaths && this.forecasts) {
-      const cond = this.weatherCondition.mostSeriousCondition(this.forecasts);
-      return this.weatherCondition.imageUrl(cond, this.iconPaths);
-    }
+  @Watch('forecasts')
+  handleForcastsChange() {
+    this.setCondition();
+    this.setIconUrl();
+  }
+
+  private setCondition() {
+    this.condition =
+      this.forecasts &&
+      this.weatherCondition.mostSeriousCondition(this.forecasts);
+  }
+  private setIconUrl() {
+    this.iconUrl =
+      this.condition &&
+      this.iconPaths &&
+      this.weatherCondition.imageUrl(this.condition, this.iconPaths);
   }
 
   render() {
     return (
       <div class="container">
-        {this.iconUrl() && (
+        {this.iconUrl && (
           <div class="icon">
-            <img src={this.iconUrl()} />
+            <img src={this.iconUrl} />
           </div>
         )}
         <div class="description">
-          <kws-condition
-            condition={this.weatherCondition.mostSeriousCondition(
-              this.forecasts
-            )}
-          />
+          <kws-condition condition={this.condition} />
           <div>
             Low:{' '}
             <kws-temperature
