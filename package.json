@@ -1,6 +1,6 @@
 {
   "name": "kws-weather-widgets",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Demonstration Weather Widgets",
   "main": "dist/kwsweather.js",
   "types": "dist/types/components.d.ts",
