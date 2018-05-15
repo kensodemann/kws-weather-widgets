@@ -2,8 +2,7 @@ import { Component, Prop } from '@stencil/core';
 
 @Component({
   tag: 'kws-uv-index',
-  styleUrl: 'kws-uv-index.css',
-  shadow: true
+  styleUrl: 'kws-uv-index.css'
 })
 export class KwsUVIndex {
   @Prop() uvIndex: number;
@@ -59,7 +58,6 @@ export class KwsUVIndex {
   }
 
   render() {
-    console.log('rendering UV Index component', this.uvIndex);
     return (
       <div class={this.mainClass()}>
         <div class="value">

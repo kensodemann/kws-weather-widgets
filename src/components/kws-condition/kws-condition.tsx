@@ -4,8 +4,7 @@ import { WeatherCondition } from '../../services/weather-condition/weather-condi
 
 @Component({
   tag: 'kws-condition',
-  styleUrl: 'kws-condition.css',
-  shadow: true
+  styleUrl: 'kws-condition.css'
 })
 export class KwsCondition {
   @Prop() iconPaths: ConditionIconPaths;
@@ -18,8 +17,6 @@ export class KwsCondition {
 
   render() {
     const url = this.weatherCondition.imageUrl(this.condition, this.iconPaths);
-    console.log('in the condition', typeof this.condition);
-    console.log(`rendering the kws-condition ${this.condition}`, this.iconPaths);
     return (
       <div>
         <div class="condition-image">{url && <img src={url} />}</div>

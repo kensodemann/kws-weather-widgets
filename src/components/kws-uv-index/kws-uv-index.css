@@ -1,19 +1,19 @@
-.low-risk {
+kws-uv-index .low-risk {
   color: #4f912a;
 }
 
-.moderate-risk {
-  color: #F5E24D;
+kws-uv-index .moderate-risk {
+  color: #f5e24d;
 }
 
-.high-risk {
-  color: #E5632B;
+kws-uv-index .high-risk {
+  color: #e5632b;
 }
 
-.very-high-risk {
-  color: #C52A2A;
+kws-uv-index .very-high-risk {
+  color: #c52a2a;
 }
 
-.extreme-risk {
-  color: #6350C1;
+kws-uv-index .extreme-risk {
+  color: #6350c1;
 }

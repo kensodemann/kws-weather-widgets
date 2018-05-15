@@ -12,46 +12,35 @@ export class WeatherCondition {
   private snow = 70;
 
   rank(condition: number): number {
-    console.log('In the rank: ', typeof condition);
-    console.log(`ranking conditition: ${condition}`);
-    const cond = condition ? parseInt(condition.toString()) : 0;
-    if (cond >= 200 && cond < 230) {
-      console.log('Thunderstorm');
+    if (condition >= 200 && condition < 230) {
       return this.thunderStorm;
     }
 
-    if (cond >= 230 && cond < 300) {
-      console.log('partial t-storms');
+    if (condition >= 230 && condition < 300) {
       return this.sunnyThunderStorm;
     }
 
-    if (cond >= 300 && cond < 400) {
-      console.log('light rain');
+    if (condition >= 300 && condition < 400) {
       return this.lightRain;
     }
 
-    if (cond >= 500 && cond < 600) {
-      console.log('shower');
+    if (condition >= 500 && condition < 600) {
       return this.shower;
     }
 
-    if ((cond >= 600 && cond < 700) || cond === 903) {
-      console.log('snow');
+    if ((condition >= 600 && condition < 700) || condition === 903) {
       return this.snow;
     }
 
-    if (cond >= 701 && cond < 772) {
-      console.log('fog');
+    if (condition >= 701 && condition < 772) {
       return this.fog;
     }
 
-    if (cond === 800 || cond === 904) {
-      console.log('sunny');
+    if (condition === 800 || condition === 904) {
       return this.sunny;
     }
 
-    if (cond >= 801 && cond < 810) {
-      console.log('cloudy');
+    if (condition >= 801 && condition < 810) {
       return this.cloudy;
     }
 
@@ -59,7 +48,6 @@ export class WeatherCondition {
   }
 
   description(condition: number): string {
-    console.log(`getting description for conditition: ${condition}`);
     switch (this.rank(condition)) {
       case this.sunny:
         return 'Sunny';

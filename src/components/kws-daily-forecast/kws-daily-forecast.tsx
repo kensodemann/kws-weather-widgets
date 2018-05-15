@@ -5,8 +5,7 @@ import { WeatherCondition } from '../../services/weather-condition/weather-condi
 
 @Component({
   tag: 'kws-daily-forecast',
-  styleUrl: 'kws-daily-forecast.css',
-  shadow: true
+  styleUrl: 'kws-daily-forecast.css'
 })
 export class KwsDailyForecast {
   @Prop() forecasts: Array<Forecast>;
