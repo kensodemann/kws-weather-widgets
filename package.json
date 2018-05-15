@@ -9,7 +9,6 @@
   "files": [
     "dist/"
   ],
-  "browser": "dist/kwsweather.js",
   "scripts": {
     "build": "stencil build",
     "bump": "node scripts/bump-version.js",
