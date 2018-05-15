@@ -22,14 +22,14 @@ describe('kws-uv-index', () => {
     });
 
     it('displays the UV Index with a single sigfig', async () => {
-      element.index = 4.235;
+      element.uvIndex = 4.235;
       await window.flush();
       let el = element.getElementsByClassName('value');
       expect(el[0].textContent.trim()).toEqual('4.2');
     });
 
     it('displays UV Index of zero properly', async () => {
-      element.index = 0;
+      element.uvIndex = 0;
       await window.flush();
       let el = element.getElementsByClassName('value');
       expect(el[0].textContent.trim()).toEqual('0.0');
@@ -37,70 +37,70 @@ describe('kws-uv-index', () => {
 
     describe('description', () => {
       it('is low for zero', async () => {
-        element.index = 0;
+        element.uvIndex = 0;
         await window.flush();
         let el = element.getElementsByClassName('description');
         expect(el[0].textContent.trim()).toEqual('Low');
       });
 
       it('is low for 2.9', async () => {
-        element.index = 2.9;
+        element.uvIndex = 2.9;
         await window.flush();
         let el = element.getElementsByClassName('description');
         expect(el[0].textContent.trim()).toEqual('Low');
       });
 
       it('is moderate for 3', async () => {
-        element.index = 3;
+        element.uvIndex = 3;
         await window.flush();
         let el = element.getElementsByClassName('description');
         expect(el[0].textContent.trim()).toEqual('Moderate');
       });
 
       it('is moderate for 5.9', async () => {
-        element.index = 5.9;
+        element.uvIndex = 5.9;
         await window.flush();
         let el = element.getElementsByClassName('description');
         expect(el[0].textContent.trim()).toEqual('Moderate');
       });
 
       it('is high for 6', async () => {
-        element.index = 6;
+        element.uvIndex = 6;
         await window.flush();
         let el = element.getElementsByClassName('description');
         expect(el[0].textContent.trim()).toEqual('High');
       });
 
       it('is high for 7.9', async () => {
-        element.index = 7.9;
+        element.uvIndex = 7.9;
         await window.flush();
         let el = element.getElementsByClassName('description');
         expect(el[0].textContent.trim()).toEqual('High');
       });
 
       it('is very high for 8', async () => {
-        element.index = 8;
+        element.uvIndex = 8;
         await window.flush();
         let el = element.getElementsByClassName('description');
         expect(el[0].textContent.trim()).toEqual('Very High');
       });
 
       it('is very high for 10.9', async () => {
-        element.index = 10.9;
+        element.uvIndex = 10.9;
         await window.flush();
         let el = element.getElementsByClassName('description');
         expect(el[0].textContent.trim()).toEqual('Very High');
       });
 
       it('is extreme for 11', async () => {
-        element.index = 11;
+        element.uvIndex = 11;
         await window.flush();
         let el = element.getElementsByClassName('description');
         expect(el[0].textContent.trim()).toEqual('Extreme');
       });
 
       it('is extreme for 15', async () => {
-        element.index = 15;
+        element.uvIndex = 15;
         await window.flush();
         let el = element.getElementsByClassName('description');
         expect(el[0].textContent.trim()).toEqual('Extreme');
@@ -109,49 +109,49 @@ describe('kws-uv-index', () => {
 
     describe('class', () => {
       it('is low-risk for 0', async () => {
-        element.index = 0;
+        element.uvIndex = 0;
         await window.flush();
         let els = element.getElementsByTagName('div');
         expect((els[0].className)).toEqual('low-risk');
       });
 
       it('is low-risk for 2.9', async () => {
-        element.index = 2.9;
+        element.uvIndex = 2.9;
         await window.flush();
         let els = element.getElementsByTagName('div');
         expect((els[0].className)).toEqual('low-risk');
       });
 
       it('is moderate-risk for 3', async () => {
-        element.index = 3;
+        element.uvIndex = 3;
         await window.flush();
         let els = element.getElementsByTagName('div');
         expect((els[0].className)).toEqual('moderate-risk');
       });
 
       it('is moderate-risk for 5.9', async () => {
-        element.index = 5.9;
+        element.uvIndex = 5.9;
         await window.flush();
         let els = element.getElementsByTagName('div');
         expect((els[0].className)).toEqual('moderate-risk');
       });
 
       it('is high-risk for 6', async () => {
-        element.index = 6;
+        element.uvIndex = 6;
         await window.flush();
         let els = element.getElementsByTagName('div');
         expect((els[0].className)).toEqual('high-risk');
       });
 
       it('is high-risk for 7.9', async () => {
-        element.index = 7.9;
+        element.uvIndex = 7.9;
         await window.flush();
         let els = element.getElementsByTagName('div');
         expect((els[0].className)).toEqual('high-risk');
       });
 
       it('is very-high-risk for 8', async () => {
-        element.index = 8;
+        element.uvIndex = 8;
         await window.flush();
         let els = element.getElementsByTagName('div');
         expect((els[0].className)).toEqual('very-high-risk');
@@ -159,21 +159,21 @@ describe('kws-uv-index', () => {
 
 
       it('is very-high-risk for 10.9', async () => {
-        element.index = 10.9;
+        element.uvIndex = 10.9;
         await window.flush();
         let els = element.getElementsByTagName('div');
         expect((els[0].className)).toEqual('very-high-risk');
       });
 
       it('is extreme-risk for 11', async () => {
-        element.index = 11;
+        element.uvIndex = 11;
         await window.flush();
         let els = element.getElementsByTagName('div');
         expect((els[0].className)).toEqual('extreme-risk');
       });
 
       it('is extreme-risk for 17', async () => {
-        element.index = 17;
+        element.uvIndex = 17;
         await window.flush();
         let els = element.getElementsByTagName('div');
         expect((els[0].className)).toEqual('extreme-risk');

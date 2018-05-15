@@ -6,7 +6,7 @@ import { Component, Prop } from '@stencil/core';
   shadow: true
 })
 export class KwsUVIndex {
-  @Prop() index: number;
+  @Prop() uvIndex: number;
 
   mainClass(): string {
     const d = this.description();
@@ -37,20 +37,20 @@ export class KwsUVIndex {
   }
 
   description(): string {
-    if (this.index || this.index === 0) {
-      if (this.index < 3) {
+    if (this.uvIndex || this.uvIndex === 0) {
+      if (this.uvIndex < 3) {
         return 'Low';
       }
 
-      if (this.index < 6) {
+      if (this.uvIndex < 6) {
         return 'Moderate';
       }
 
-      if (this.index < 8) {
+      if (this.uvIndex < 8) {
         return 'High';
       }
 
-      if (this.index < 11) {
+      if (this.uvIndex < 11) {
         return 'Very High';
       }
 
@@ -62,7 +62,7 @@ export class KwsUVIndex {
     return (
       <div class={this.mainClass()}>
         <div class="value">
-          {this.index || this.index === 0 ? this.index.toFixed(1) : ''}
+          {this.uvIndex || this.uvIndex === 0 ? this.uvIndex.toFixed(1) : ''}
         </div>
         <div class="description">{this.description()}</div>
       </div>
