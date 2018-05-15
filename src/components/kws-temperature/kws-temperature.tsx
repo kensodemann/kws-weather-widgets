@@ -22,6 +22,7 @@ export class KwsTemperature {
   }
 
   render() {
+    console.log(`rendering temperature: ${this.temperature}`);
     return (
       <span>
         {this.scale === 'C'

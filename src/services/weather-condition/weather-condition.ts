@@ -13,42 +13,43 @@ export class WeatherCondition {
 
   rank(condition: number): number {
     console.log(`ranking conditition: ${condition}`);
-    if (condition >= 200 && condition < 230) {
+    const cond = condition ? parseInt(condition.toString()) : 0;
+    if (cond >= 200 && cond < 230) {
       console.log('Thunderstorm');
       return this.thunderStorm;
     }
 
-    if (condition >= 230 && condition < 300) {
+    if (cond >= 230 && cond < 300) {
       console.log('partial t-storms');
       return this.sunnyThunderStorm;
     }
 
-    if (condition >= 300 && condition < 400) {
+    if (cond >= 300 && cond < 400) {
       console.log('light rain');
       return this.lightRain;
     }
 
-    if (condition >= 500 && condition < 600) {
+    if (cond >= 500 && cond < 600) {
       console.log('shower');
       return this.shower;
     }
 
-    if ((condition >= 600 && condition < 700) || condition === 903) {
+    if ((cond >= 600 && cond < 700) || cond === 903) {
       console.log('snow');
       return this.snow;
     }
 
-    if (condition >= 701 && condition < 772) {
+    if (cond >= 701 && cond < 772) {
       console.log('fog');
       return this.fog;
     }
 
-    if (condition === 800 || condition === 904) {
+    if (cond === 800 || cond === 904) {
       console.log('sunny');
       return this.sunny;
     }
 
-    if (condition >= 801 && condition < 810) {
+    if (cond >= 801 && cond < 810) {
       console.log('cloudy');
       return this.cloudy;
     }
