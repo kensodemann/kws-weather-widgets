@@ -141,7 +141,7 @@ declare global {
 
   namespace StencilComponents {
     interface KwsUvIndex {
-      'index': number;
+      'uvIndex': number;
     }
   }
 
@@ -164,7 +164,7 @@ declare global {
   }
   namespace JSXElements {
     export interface KwsUvIndexAttributes extends HTMLAttributes {
-      'index'?: number;
+      'uvIndex'?: number;
     }
   }
 }
