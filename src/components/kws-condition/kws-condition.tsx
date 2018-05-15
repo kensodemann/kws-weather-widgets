@@ -18,6 +18,7 @@ export class KwsCondition {
 
   render() {
     const url = this.weatherCondition.imageUrl(this.condition, this.iconPaths);
+    console.log(typeof this.condition);
     console.log(`rendering the kws-condition ${this.condition}`);
     return (
       <div>

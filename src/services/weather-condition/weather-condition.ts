@@ -12,6 +12,7 @@ export class WeatherCondition {
   private snow = 70;
 
   rank(condition: number): number {
+    console.log(typeof condition);
     console.log(`ranking conditition: ${condition}`);
     const cond = condition ? parseInt(condition.toString()) : 0;
     if (cond >= 200 && cond < 230) {
