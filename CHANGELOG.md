@@ -1,3 +1,13 @@
+<a name="0.0.3"></a>
+## [0.0.3](https://github.com/kensodemann/kws-weather-widgets/compare/v0.0.3-3...v0.0.3) (2018-05-15)
+
+
+### Features
+
+* **css:** remove the shadow DOM setting ([61d922e](https://github.com/kensodemann/kws-weather-widgets/commit/61d922e))
+
+
+
 <a name="0.0.3-3"></a>
 ## [0.0.3-3](https://github.com/kensodemann/kws-weather-widgets/compare/v0.0.3-2...v0.0.3-3) (2018-05-15)
 
