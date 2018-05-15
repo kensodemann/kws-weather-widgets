@@ -2,7 +2,8 @@
   "name": "kws-weather-widgets",
   "version": "0.0.3",
   "description": "Demonstration Weather Widgets",
-  "main": "dist/kwsweather.js",
+  "module": "dist/esm/index.js",
+  "main": "dist/index.js",
   "types": "dist/types/components.d.ts",
   "collection": "dist/collection/collection-manifest.json",
   "files": [
@@ -22,7 +23,7 @@
   },
   "dependencies": {},
   "devDependencies": {
-    "@stencil/core": "^0.7.22",
+    "@stencil/core": "^0.9.0-0",
     "@stencil/dev-server": "latest",
     "@stencil/utils": "latest",
     "@types/jest": "^21.1.1",
