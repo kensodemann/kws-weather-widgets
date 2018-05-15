@@ -59,6 +59,7 @@ export class KwsUVIndex {
   }
 
   render() {
+    console.log('rendering UV Index component', this.uvIndex);
     return (
       <div class={this.mainClass()}>
         <div class="value">
