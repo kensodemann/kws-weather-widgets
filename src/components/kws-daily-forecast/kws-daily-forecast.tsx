@@ -26,6 +26,12 @@ export class KwsDailyForecast {
     this.setIconUrl();
   }
 
+  componentWillLoad() {
+    if (this.forecasts) {
+      this.handleForcastsChange();
+    }
+  }
+
   private setCondition() {
     this.condition =
       this.forecasts &&
