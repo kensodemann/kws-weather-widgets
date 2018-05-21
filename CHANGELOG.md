@@ -1,3 +1,18 @@
+<a name="0.0.6"></a>
+## [0.0.6](https://github.com/kensodemann/kws-weather-widgets/compare/v0.0.5...v0.0.6) (2018-05-21)
+
+
+### Bug Fixes
+
+* **forecast:** handle component load ([ff175f2](https://github.com/kensodemann/kws-weather-widgets/commit/ff175f2))
+
+
+### Features
+
+* **forecast:** add the date to the forecast ([29d250b](https://github.com/kensodemann/kws-weather-widgets/commit/29d250b))
+
+
+
 <a name="0.0.5"></a>
 ## [0.0.5](https://github.com/kensodemann/kws-weather-widgets/compare/v0.0.4...v0.0.5) (2018-05-15)
 
@@ -15,26 +30,6 @@
 ### Features
 
 * **css:** remove the shadow DOM setting ([61d922e](https://github.com/kensodemann/kws-weather-widgets/commit/61d922e))
-
-
-
-<a name="0.0.3-3"></a>
-## [0.0.3-3](https://github.com/kensodemann/kws-weather-widgets/compare/v0.0.3-2...v0.0.3-3) (2018-05-15)
-
-
-
-<a name="0.0.3-2"></a>
-## [0.0.3-2](https://github.com/kensodemann/kws-weather-widgets/compare/v0.0.3-1...v0.0.3-2) (2018-05-15)
-
-
-
-<a name="0.0.3-1"></a>
-## [0.0.3-1](https://github.com/kensodemann/kws-weather-widgets/compare/v0.0.3-0...v0.0.3-1) (2018-05-15)
-
-
-
-<a name="0.0.3-0"></a>
-## [0.0.3-0](https://github.com/kensodemann/kws-weather-widgets/compare/v0.0.2...v0.0.3-0) (2018-05-15)
 
 
 
