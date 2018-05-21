@@ -15,6 +15,12 @@ export class KwsDailyForecast {
   private condition: number;
   private iconUrl: string;
   private weatherCondition: WeatherCondition;
+  private dateOptions = {
+    weekday: 'short',
+    year: 'numeric',
+    month: 'short',
+    day: 'numeric'
+  };
 
   constructor() {
     this.weatherCondition = new WeatherCondition();
@@ -37,11 +43,20 @@ export class KwsDailyForecast {
       this.forecasts &&
       this.weatherCondition.mostSeriousCondition(this.forecasts);
   }
+
   private setIconUrl() {
     this.iconUrl =
       this.condition &&
       this.iconPaths &&
       this.weatherCondition.imageUrl(this.condition, this.iconPaths);
+  }
+
+  private dateString(): string {
+    return (
+      this.forecasts &&
+      this.forecasts.length &&
+      this.forecasts[0].date.toLocaleDateString('en-US', this.dateOptions)
+    );
   }
 
   render() {
@@ -53,6 +68,7 @@ export class KwsDailyForecast {
           </div>
         )}
         <div class="description">
+          <div class="date">{this.dateString()}</div>
           <kws-condition condition={this.condition} />
           <div>
             Low:{' '}
