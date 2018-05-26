@@ -8,26 +8,19 @@ export class KwsTemperature {
   @Prop() temperature: number;
   @Prop() scale: string;
 
-  celcius(kelvin: number): string {
-    if (kelvin || kelvin === 0) {
-      return (kelvin - 273.15).toFixed(0);
-    }
+  private celcius(): string {
+    return `${(this.temperature - 273.15).toFixed(0)} ℃`;
   }
 
-  fahrenheit(kelvin: number): string {
-    if (kelvin || kelvin === 0) {
-      return ((kelvin * 9 / 5) - 459.67).toFixed(0);
-    }
+  private fahrenheit(): string {
+    return `${(this.temperature * 9 / 5 - 459.67).toFixed(0)} ℉`;
   }
 
   render() {
-    return (
-      <span>
-        {this.scale === 'C'
-          ? this.celcius(this.temperature)
-          : this.fahrenheit(this.temperature)}{' '}
-        {this.scale === 'C' ? '℃' : '℉'}
-      </span>
-    );
+    if (this.temperature || this.temperature === 0) {
+      return (
+        <span>{this.scale === 'C' ? this.celcius() : this.fahrenheit()}</span>
+      );
+    }
   }
 }

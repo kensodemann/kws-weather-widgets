@@ -17,17 +17,12 @@ describe('kws-temperature', () => {
       });
     });
 
-    it('should work without parameters', () => {
-      expect(element.textContent.trim()).toEqual('℉');
+    it('displays nothing without parameters', () => {
+      expect(element.textContent.trim()).toEqual('');
     });
 
     describe('using a scale of C', () => {
       beforeEach(() => (element.scale = 'C'));
-
-      it('shows degrees Celcius', async () => {
-        await window.flush();
-        expect(element.textContent.trim()).toEqual('℃');
-      });
 
       it('converts negative temps properly', async () => {
         element.temperature = 254.55;
@@ -56,11 +51,6 @@ describe('kws-temperature', () => {
 
     describe('using a scale of F', () => {
       beforeEach(() => (element.scale = 'F'));
-
-      it('shows degrees Fahrenheit', async () => {
-        await window.flush();
-        expect(element.textContent.trim()).toEqual('℉');
-      });
 
       it('converts negative temps properly', async () => {
         element.temperature = 254.55;
