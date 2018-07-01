@@ -7,6 +7,40 @@
   <title>Stencil Component Starter</title>
   <script src="/build/kwsweather.js"></script>
 
+  <script>
+    class ManualTemperature extends HTMLElement {
+      constructor() {
+        super();
+        let shadow = this.attachShadow({mode: 'open'});
+        shadow.appendChild(document.createElement('span'));
+      }
+
+      connectedCallback() {
+        updateTemperature(this);
+      }
+    }
+
+    function updateTemperature(elem) {
+      const shadow = elem.shadowRoot;
+      const childNodes = shadow.childNodes;
+      childNodes.forEach(element => {
+        if (element.nodeName === 'SPAN') {
+          const s = elem.getAttribute('scale');
+          const t = elem.getAttribute('temperature');
+          element.textContent = formattedTemperature(t, s);
+        }
+      });
+    }
+
+    function formattedTemperature(temperature, scale) {
+      const t = scale === 'F' ? temperature * 9 / 5 - 459.67 : temperature - 273.15;
+      const s = scale === 'F' ? '℉' : '℃';
+      return (temperature || '') && (t.toFixed(0) + ' ' + s);
+    }
+
+    customElements.define('manual-temperature', ManualTemperature);
+  </script>
+
 </head>
 
 <body>
@@ -14,6 +48,9 @@
 
   <div class="sample">
     <h2>Temperature</h2>
+    <!-- <div>
+      <manual-temperature temperature="299" scale="C"></manual-temperature>
+    </div> -->
     <div>
       <kws-temperature temperature="273.15" scale="C"></kws-temperature>
     </div>
@@ -34,28 +71,6 @@
     </div>
   </div>
 
-  <div class="sample">
-    <h2>UV Index</h2>
-    <kws-uv-index index="1.2"></kws-uv-index>
-    <kws-uv-index index="3.5"></kws-uv-index>
-    <kws-uv-index index="7.2"></kws-uv-index>
-    <kws-uv-index index="9.7"></kws-uv-index>
-    <kws-uv-index index="12.5"></kws-uv-index>
-  </div>
-
-  <div class="sample">
-    <h2>Conditions (no images)</h2>
-    <kws-condition condition="800"></kws-condition>
-    <kws-condition condition="625"></kws-condition>
-    <kws-condition condition="503"></kws-condition>
-    <kws-condition condition="215"></kws-condition>
-    <kws-condition condition="245"></kws-condition>
-  </div>
-
-  <div class="sample">
-    <h2>Daily Forecast (no images)</h2>
-    <kws-daily-forecast></kws-daily-forecast>
-  </div>
 </body>
 
 </html>
