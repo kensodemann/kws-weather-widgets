@@ -1,3 +1,23 @@
+<a name="0.0.8"></a>
+## 0.0.8 (2018-07-02)
+
+
+### Bug Fixes
+
+* **forecast:** handle component load ([ff175f2](https://github.com/kensodemann/kws-weather-widgets/commit/ff175f2))
+
+
+### Features
+
+* **condition:** add the weather condition component ([3736c8e](https://github.com/kensodemann/kws-weather-widgets/commit/3736c8e))
+* **css:** remove the shadow DOM setting ([61d922e](https://github.com/kensodemann/kws-weather-widgets/commit/61d922e))
+* **forecast:** add a daily forecast component ([e704b6a](https://github.com/kensodemann/kws-weather-widgets/commit/e704b6a))
+* **forecast:** add the date to the forecast ([29d250b](https://github.com/kensodemann/kws-weather-widgets/commit/29d250b))
+* **temperature:** create a temperature component ([1da7bc1](https://github.com/kensodemann/kws-weather-widgets/commit/1da7bc1))
+* **uv-index:** create UV Index widget ([db68a86](https://github.com/kensodemann/kws-weather-widgets/commit/db68a86))
+
+
+
 <a name="0.0.7"></a>
 ## 0.0.7 (2018-06-12)
 
