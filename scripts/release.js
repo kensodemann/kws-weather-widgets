@@ -104,6 +104,23 @@ function runTasks(oldVersion, inc) {
       task: () => execa('npm', ['run', 'changelog'], { cwd: rootDir })
     },
     {
+      title: 'Cleaning',
+      task: () =>
+        new Promise((resolve, reject) => {
+          rimraf('node_modules', err => {
+            if (err) {
+              reject(err);
+            } else {
+              resolve();
+            }
+          });
+        })
+    },
+    {
+      title: 'Installing',
+      task: () => execa('npm', ['install'], { cwd: rootDir })
+    },
+    {
       title: 'Committing',
       task: () => execa('git', ['commit', `-am chore(release): release ${newVersion}`], { cwd: rootDir })
     },
