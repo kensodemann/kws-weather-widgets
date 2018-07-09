@@ -1,3 +1,13 @@
+<a name="0.0.9"></a>
+## [0.0.9](https://github.com/kensodemann/kws-weather-widgets/compare/v0.0.8...v0.0.9) (2018-07-09)
+
+
+### Features
+
+* **styles:** use custom properties ([4fec407](https://github.com/kensodemann/kws-weather-widgets/commit/4fec407))
+
+
+
 <a name="0.0.8"></a>
 ## 0.0.8 (2018-07-02)
 
