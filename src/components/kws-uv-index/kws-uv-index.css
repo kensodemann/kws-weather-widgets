@@ -1,19 +1,30 @@
-kws-uv-index .low-risk {
+.value {
+  font-size: var(--kws-uv-index-value-font-size);
+  font-weight: var(--kws-uv-index-value-font-weight);
+}
+
+.description {
+  font-size: var(--kws-uv-index-description-font-size);
+  font-weight: var(--kws-uv-index-description-font-weight);
+}
+
+.low-risk {
   color: #4f912a;
 }
 
-kws-uv-index .moderate-risk {
+.moderate-risk {
   color: #f5e24d;
 }
 
-kws-uv-index .high-risk {
+.high-risk {
   color: #e5632b;
 }
 
-kws-uv-index .very-high-risk {
+.very-high-risk {
   color: #c52a2a;
 }
 
-kws-uv-index .extreme-risk {
+.extreme-risk {
   color: #6350c1;
 }
+

@@ -2,7 +2,8 @@ import { Component, Prop } from '@stencil/core';
 
 @Component({
   tag: 'kws-temperature',
-  styleUrl: 'kws-temperature.css'
+  styleUrl: 'kws-temperature.css',
+  shadow: true
 })
 export class KwsTemperature {
   @Prop() temperature: number;

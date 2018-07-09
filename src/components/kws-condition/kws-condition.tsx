@@ -4,7 +4,8 @@ import { WeatherCondition } from '../../services/weather-condition/weather-condi
 
 @Component({
   tag: 'kws-condition',
-  styleUrl: 'kws-condition.css'
+  styleUrl: 'kws-condition.css',
+  shadow: true
 })
 export class KwsCondition {
   @Prop() iconPaths: ConditionIconPaths;

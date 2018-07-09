@@ -1,0 +1,21 @@
+.container {
+  display: var(--kws-daily-forecast-display);
+}
+
+.description {
+  font-size: var(--kws-daily-forecast-description-font-size);
+  font-weight: var(--kws-daily-forecast-description-font-weight);
+  padding-left: var(--kws-daily-forecast-description-padding-left);
+  padding-right: var(--kws-daily-forecast-description-padding-right);
+  padding-top: var(--kws-daily-forecast-description-padding-top);
+  padding-bottom: var(--kws-daily-forecast-description-padding-bottom);
+}
+
+.description .date {
+  font-size: var(--kws-daily-forecast-date-font-size);
+  font-weight: var(--kws-daily-forecast-date-font-weight);
+}
+
+.icon img {
+  height: var(--kws-daily-forecast-image-height);
+}

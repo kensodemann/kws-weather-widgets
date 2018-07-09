@@ -2,7 +2,8 @@ import { Component, Prop } from '@stencil/core';
 
 @Component({
   tag: 'kws-uv-index',
-  styleUrl: 'kws-uv-index.css'
+  styleUrl: 'kws-uv-index.css',
+  shadow: true
 })
 export class KwsUVIndex {
   @Prop() uvIndex: number;
