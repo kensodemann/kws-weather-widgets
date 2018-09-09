@@ -10,3 +10,83 @@ This is a sample web component library that contains some simple weather related
   * **kws-condition** - given a mapping of condition types to image URLs and a condition code, determines which code to use and displays the image with a label
 * Compound
   * **kws-daily-forecast** - condition, date, low, high
+
+## Usage
+
+Include the library in your project: `npm i kws-weather-widgets`
+
+The Stencil documentation site has an excellent [Framework Integration Guide](https://stenciljs.com/docs/framework-integration). Following that to guide to integrate the library with your project.
+
+**Note:** if you are using Vue, the prefix used is `kws` so the `ignoredElements`  line is `Vue.config.ignoredElements = [/test-\w*/];`.
+
+### Images
+
+This library does not include its own images. In order to inform the library how to get the images to use, you need to set up a map that specifies the image file to use for each of the weather conditions.
+
+Here is an example:
+
+
+```TypeScript
+export class IconMap {
+  sunny = 'assets/images/sunny.png';
+  cloudy = 'assets/images/cloudy.png';
+  lightRain = 'assets/images/rain.png';
+  shower = 'assets/images/shower.png';
+  sunnyThunderStorm = 'assets/images/partial-tstorm.png';
+  thunderStorm = 'assets/images/tstorm.png';
+  fog = 'assets/images/fog.png';
+  snow = 'assets/images/snow.png';
+  unknown = 'assets/images/unknown.png';
+}
+```
+
+### Components
+
+Any component that take a `condition` assumes that the condition is one of the [condition codes](https://openweathermap.org/weather-conditions) used by [OpenWeatherMap.org](https://openweathermap.org).
+
+Examples shown below are using Angular property bindings. Use whatever is appropriate for the architecture of your application.
+
+#### `kws-temperature`
+
+Displays the `temperature`, given in Kelvin, in the given `scale` (C or F).
+```html
+<kws-temperature scale="F" temperature="297"></kws-temperature>
+```
+
+#### `kws-condition`
+
+Displays the current condition in both text and icon form.
+
+```html
+<kws-condition [condition]="200" [iconPaths]="iconMap"></kws-condition>
+```
+
+#### `kws-daily-forecast`
+
+Displays the forcast for a given day.
+
+```html
+<kws-daily-forecast scale="F" [forecasts]="forecastData" [iconPaths]="iconMap"></kws-daily-forecast>
+```
+
+The forecast property is an array of forecast data for a single day in the following format:
+
+```TypeScript
+export interface Forecast {
+  date: Date;
+  condition: number;
+  temperature: number;
+}
+```
+
+This data will be the weather conditions every X hours throughout the day. The component figures out a general condition to use for that day from the given data.
+
+The temperature is specified in Kelvin.
+
+#### `kws-uv-index`
+
+Displays the UV index along with a risk level, in a color appropriate for the level of risk.
+
+```html
+<kws-uv-index [uvIndex]="value"></kws-uv-index>
+```
