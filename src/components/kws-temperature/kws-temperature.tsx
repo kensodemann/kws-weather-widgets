@@ -1,4 +1,4 @@
-import { Component, Prop } from '@stencil/core';
+import { Component, Prop, Watch } from '@stencil/core';
 
 @Component({
   tag: 'kws-temperature',
@@ -9,12 +9,17 @@ export class KwsTemperature {
   @Prop() temperature: number;
   @Prop() scale: string;
 
+  @Watch('scale')
+  logScale(newScale: string, oldScale: string) {
+    console.log(`new: ${newScale}, old: ${oldScale}`);
+  }
+
   private celcius(): string {
     return `${(this.temperature - 273.15).toFixed(0)} ℃`;
   }
 
   private fahrenheit(): string {
-    return `${(this.temperature * 9 / 5 - 459.67).toFixed(0)} ℉`;
+    return `${((this.temperature * 9) / 5 - 459.67).toFixed(0)} ℉`;
   }
 
   render() {

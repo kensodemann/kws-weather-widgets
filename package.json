@@ -20,7 +20,7 @@
   },
   "dependencies": {},
   "devDependencies": {
-    "@stencil/core": "0.12.4",
+    "@stencil/core": "0.13.2",
     "@types/jest": "^21.1.1",
     "chalk": "^2.4.1",
     "conventional-changelog": "^1.1.24",
@@ -29,7 +29,8 @@
     "jest": "^21.2.1",
     "listr": "~0.14.1",
     "rimraf": "^2.6.2",
-    "semver": "^5.5.0"
+    "semver": "^5.5.0",
+    "workbox-build": "3.4.1"
   },
   "repository": {
     "type": "git",
