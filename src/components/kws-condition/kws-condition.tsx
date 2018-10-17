@@ -10,7 +10,12 @@ import { WeatherCondition } from '../../services/weather-condition/weather-condi
 export class KwsCondition {
   @Prop() iconPaths: ConditionIconPaths;
   @Prop() condition: number;
+  @Prop() bgColor: string;
   private weatherCondition: WeatherCondition;
+
+  getBackgroundStyle() {
+    return this.bgColor && this.bgColor !== 'white' ? { 'background': this.bgColor, '--kws-font-color': 'white' } : {};
+  }
 
   constructor() {
     this.weatherCondition = new WeatherCondition();
@@ -19,7 +24,7 @@ export class KwsCondition {
   render() {
     const url = this.weatherCondition.imageUrl(this.condition, this.iconPaths);
     return (
-      <div>
+      <div style={this.getBackgroundStyle()}>
         <div class="condition-image">{url && <img src={url} />}</div>
         <div class="condition-label">
           {this.weatherCondition.description(this.condition)}

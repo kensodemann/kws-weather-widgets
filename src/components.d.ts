@@ -19,10 +19,12 @@ import {
 export namespace Components {
 
   interface KwsCondition {
+    'bgColor': string;
     'condition': number;
     'iconPaths': ConditionIconPaths;
   }
   interface KwsConditionAttributes extends StencilHTMLAttributes {
+    'bgColor'?: string;
     'condition'?: number;
     'iconPaths'?: ConditionIconPaths;
   }
