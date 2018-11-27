@@ -22,7 +22,7 @@
   },
   "dependencies": {},
   "devDependencies": {
-    "@stencil/core": "~0.15.2",
+    "@stencil/core": "~0.16.0-6",
     "@types/jest": "23.3.9",
     "@types/puppeteer": "1.10.0",
     "chalk": "^2.4.1",
