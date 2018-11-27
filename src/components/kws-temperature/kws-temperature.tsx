@@ -25,7 +25,7 @@ export class KwsTemperature {
   render() {
     if (this.temperature || this.temperature === 0) {
       return (
-        <span>{this.scale === 'C' ? this.celcius() : this.fahrenheit()}</span>
+        <span>{this.scale === 'C' ? this.celcius() : this.fahrenheit()} using 0.16.0-6</span>
       );
     }
   }
