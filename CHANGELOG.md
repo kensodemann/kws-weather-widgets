@@ -1,3 +1,14 @@
+<a name="0.0.10-0"></a>
+## [0.0.10-0](https://github.com/kensodemann/kws-weather-widgets/compare/v0.0.9...v0.0.10-0) (2018-11-27)
+
+
+### Features
+
+* **condition:** allow setting of the background color ([42416a9](https://github.com/kensodemann/kws-weather-widgets/commit/42416a9))
+* **upgrade:** initial work to upgrade to latest stencil ([ed30636](https://github.com/kensodemann/kws-weather-widgets/commit/ed30636))
+
+
+
 <a name="0.0.9"></a>
 ## [0.0.9](https://github.com/kensodemann/kws-weather-widgets/compare/v0.0.8...v0.0.9) (2018-07-09)
 
