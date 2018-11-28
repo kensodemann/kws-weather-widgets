@@ -224,38 +224,47 @@ describe('Weather Condition Service', () => {
       expect(
         weatherCondition.high([
           {
+            date: new Date(),
             condition: 800,
             temperature: 287.15
           },
           {
+            date: new Date(),
             condition: 800,
             temperature: 286.65
           },
           {
+            date: new Date(),
             condition: 801,
             temperature: 289.65
           },
           {
+            date: new Date(),
             condition: 801,
             temperature: 290.65
           },
           {
+            date: new Date(),
             condition: 801,
             temperature: 295.15
           },
           {
+            date: new Date(),
             condition: 305,
             temperature: 297.15
           },
           {
+            date: new Date(),
             condition: 800,
             temperature: 295.65
           },
           {
+            date: new Date(),
             condition: 800,
             temperature: 293.65
           },
           {
+            date: new Date(),
             condition: 800,
             temperature: 288.65
           }
@@ -275,38 +284,47 @@ describe('Weather Condition Service', () => {
       expect(
         weatherCondition.low([
           {
+            date: new Date(),
             condition: 800,
             temperature: 287.15
           },
           {
+            date: new Date(),
             condition: 800,
             temperature: 286.65
           },
           {
+            date: new Date(),
             condition: 801,
             temperature: 289.65
           },
           {
+            date: new Date(),
             condition: 801,
             temperature: 290.65
           },
           {
+            date: new Date(),
             condition: 801,
             temperature: 295.15
           },
           {
+            date: new Date(),
             condition: 305,
             temperature: 297.15
           },
           {
+            date: new Date(),
             condition: 800,
             temperature: 295.65
           },
           {
+            date: new Date(),
             condition: 800,
             temperature: 293.65
           },
           {
+            date: new Date(),
             condition: 800,
             temperature: 288.65
           }
@@ -326,38 +344,47 @@ describe('Weather Condition Service', () => {
       expect(
         weatherCondition.mostSeriousCondition([
           {
+            date: new Date(),
             condition: 800,
             temperature: 287.15
           },
           {
+            date: new Date(),
             condition: 800,
             temperature: 286.65
           },
           {
+            date: new Date(),
             condition: 801,
             temperature: 289.65
           },
           {
+            date: new Date(),
             condition: 801,
             temperature: 290.65
           },
           {
+            date: new Date(),
             condition: 801,
             temperature: 295.15
           },
           {
+            date: new Date(),
             condition: 305,
             temperature: 297.15
           },
           {
+            date: new Date(),
             condition: 800,
             temperature: 295.65
           },
           {
+            date: new Date(),
             condition: 800,
             temperature: 293.65
           },
           {
+            date: new Date(),
             condition: 800,
             temperature: 288.65
           }

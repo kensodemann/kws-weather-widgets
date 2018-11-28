@@ -17,7 +17,7 @@ Include the library in your project: `npm i kws-weather-widgets`
 
 The Stencil documentation site has an excellent [Framework Integration Guide](https://stenciljs.com/docs/framework-integration). Following that to guide to integrate the library with your project.
 
-**Note:** if you are using Vue, the prefix used is `kws` so the `ignoredElements`  line is `Vue.config.ignoredElements = [/test-\w*/];`.
+**Note:** if you are using Vue, the prefix used is `kws` so the `ignoredElements`  line is `Vue.config.ignoredElements = [/kws-\w*/];`.
 
 ### Images
 

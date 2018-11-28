@@ -8,7 +8,7 @@ import { Component, Prop } from '@stencil/core';
 export class KwsUVIndex {
   @Prop() uvIndex: number;
 
-  mainClass(): string {
+  private mainClass(): string {
     const d = this.description();
     switch (d) {
       case 'Low':
@@ -36,7 +36,7 @@ export class KwsUVIndex {
     }
   }
 
-  description(): string {
+  private description(): string {
     if (this.uvIndex || this.uvIndex === 0) {
       if (this.uvIndex < 3) {
         return 'Low';

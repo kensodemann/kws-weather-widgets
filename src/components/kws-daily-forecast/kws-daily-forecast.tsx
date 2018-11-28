@@ -1,4 +1,5 @@
 import { Component, Prop, Watch } from '@stencil/core';
+import { format } from 'date-fns';
 import { ConditionIconPaths } from '../../models/condition-icon-paths';
 import { Forecast } from '../../models/forecast';
 import { WeatherCondition } from '../../services/weather-condition/weather-condition';
@@ -16,12 +17,6 @@ export class KwsDailyForecast {
   private condition: number;
   private iconUrl: string;
   private weatherCondition: WeatherCondition;
-  private dateOptions = {
-    weekday: 'short',
-    year: 'numeric',
-    month: 'short',
-    day: 'numeric'
-  };
 
   constructor() {
     this.weatherCondition = new WeatherCondition();
@@ -56,7 +51,7 @@ export class KwsDailyForecast {
     return (
       this.forecasts &&
       this.forecasts.length &&
-      this.forecasts[0].date.toLocaleDateString('en-US', this.dateOptions)
+      format(this.forecasts[0].date, 'ddd, MMM D, YYYY')
     );
   }
 
