@@ -1,6 +1,6 @@
 {
   "name": "kws-weather-widgets",
-  "version": "0.0.10-2",
+  "version": "1.0.0",
   "description": "Demonstration Weather Widgets",
   "module": "dist/esm/index.js",
   "main": "dist/index.js",

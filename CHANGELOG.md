@@ -1,3 +1,13 @@
+<a name="1.0.0"></a>
+# [1.0.0](https://github.com/kensodemann/kws-weather-widgets/compare/v0.0.10-2...v1.0.0) (2018-11-29)
+
+
+### Bug Fixes
+
+* **tests:** convert some unit tests to e2e tests ([d0e0f5a](https://github.com/kensodemann/kws-weather-widgets/commit/d0e0f5a))
+
+
+
 <a name="0.0.10-2"></a>
 ## [0.0.10-2](https://github.com/kensodemann/kws-weather-widgets/compare/v0.0.10-1...v0.0.10-2) (2018-11-27)
 
