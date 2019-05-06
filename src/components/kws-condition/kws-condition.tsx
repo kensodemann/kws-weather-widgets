@@ -1,4 +1,4 @@
-import { Component, Prop } from '@stencil/core';
+import { Component, h, Prop } from '@stencil/core';
 import { ConditionIconPaths } from '../../models/condition-icon-paths';
 import { WeatherCondition } from '../../services/weather-condition/weather-condition';
 
