@@ -1,3 +1,12 @@
+## [2.0.2](https://github.com/kensodemann/kws-weather-widgets/compare/v2.0.1...v2.0.2) (2019-10-14)
+
+
+### Bug Fixes
+
+* **forecast:** update the date format ([41cb88b](https://github.com/kensodemann/kws-weather-widgets/commit/41cb88b3056f3d0c29c27ad2fd9fc85b09c7484c))
+
+
+
 ## [2.0.1](https://github.com/kensodemann/kws-weather-widgets/compare/v2.0.0...v2.0.1) (2019-10-14)
 
 
