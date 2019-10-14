@@ -5,9 +5,7 @@
  */
 
 
-import '@stencil/core';
-
-
+import { HTMLStencilElement, JSXBase } from '@stencil/core/internal';
 import {
   ConditionIconPaths,
 } from './models/condition-icon-paths';
@@ -15,62 +13,27 @@ import {
   Forecast,
 } from './models/forecast';
 
-
 export namespace Components {
-
   interface KwsCondition {
     'bgColor': string;
     'condition': number;
     'iconPaths': ConditionIconPaths;
   }
-  interface KwsConditionAttributes extends StencilHTMLAttributes {
-    'bgColor'?: string;
-    'condition'?: number;
-    'iconPaths'?: ConditionIconPaths;
-  }
-
   interface KwsDailyForecast {
     'forecasts': Array<Forecast>;
     'iconPaths': ConditionIconPaths;
     'scale': string;
   }
-  interface KwsDailyForecastAttributes extends StencilHTMLAttributes {
-    'forecasts'?: Array<Forecast>;
-    'iconPaths'?: ConditionIconPaths;
-    'scale'?: string;
-  }
-
   interface KwsTemperature {
     'scale': string;
     'temperature': number;
   }
-  interface KwsTemperatureAttributes extends StencilHTMLAttributes {
-    'scale'?: string;
-    'temperature'?: number;
-  }
-
   interface KwsUvIndex {
     'uvIndex': number;
-  }
-  interface KwsUvIndexAttributes extends StencilHTMLAttributes {
-    'uvIndex'?: number;
   }
 }
 
 declare global {
-  interface StencilElementInterfaces {
-    'KwsCondition': Components.KwsCondition;
-    'KwsDailyForecast': Components.KwsDailyForecast;
-    'KwsTemperature': Components.KwsTemperature;
-    'KwsUvIndex': Components.KwsUvIndex;
-  }
-
-  interface StencilIntrinsicElements {
-    'kws-condition': Components.KwsConditionAttributes;
-    'kws-daily-forecast': Components.KwsDailyForecastAttributes;
-    'kws-temperature': Components.KwsTemperatureAttributes;
-    'kws-uv-index': Components.KwsUvIndexAttributes;
-  }
 
 
   interface HTMLKwsConditionElement extends Components.KwsCondition, HTMLStencilElement {}
@@ -96,28 +59,53 @@ declare global {
     prototype: HTMLKwsUvIndexElement;
     new (): HTMLKwsUvIndexElement;
   };
-
   interface HTMLElementTagNameMap {
-    'kws-condition': HTMLKwsConditionElement
-    'kws-daily-forecast': HTMLKwsDailyForecastElement
-    'kws-temperature': HTMLKwsTemperatureElement
-    'kws-uv-index': HTMLKwsUvIndexElement
-  }
-
-  interface ElementTagNameMap {
     'kws-condition': HTMLKwsConditionElement;
     'kws-daily-forecast': HTMLKwsDailyForecastElement;
     'kws-temperature': HTMLKwsTemperatureElement;
     'kws-uv-index': HTMLKwsUvIndexElement;
   }
+}
+
+declare namespace LocalJSX {
+  interface KwsCondition {
+    'bgColor'?: string;
+    'condition'?: number;
+    'iconPaths'?: ConditionIconPaths;
+  }
+  interface KwsDailyForecast {
+    'forecasts'?: Array<Forecast>;
+    'iconPaths'?: ConditionIconPaths;
+    'scale'?: string;
+  }
+  interface KwsTemperature {
+    'scale'?: string;
+    'temperature'?: number;
+  }
+  interface KwsUvIndex {
+    'uvIndex'?: number;
+  }
+
+  interface IntrinsicElements {
+    'kws-condition': KwsCondition;
+    'kws-daily-forecast': KwsDailyForecast;
+    'kws-temperature': KwsTemperature;
+    'kws-uv-index': KwsUvIndex;
+  }
+}
+
+export { LocalJSX as JSX };
 
 
+declare module "@stencil/core" {
   export namespace JSX {
-    export interface Element {}
-    export interface IntrinsicElements extends StencilIntrinsicElements {
-      [tagName: string]: any;
+    interface IntrinsicElements {
+      'kws-condition': LocalJSX.KwsCondition & JSXBase.HTMLAttributes<HTMLKwsConditionElement>;
+      'kws-daily-forecast': LocalJSX.KwsDailyForecast & JSXBase.HTMLAttributes<HTMLKwsDailyForecastElement>;
+      'kws-temperature': LocalJSX.KwsTemperature & JSXBase.HTMLAttributes<HTMLKwsTemperatureElement>;
+      'kws-uv-index': LocalJSX.KwsUvIndex & JSXBase.HTMLAttributes<HTMLKwsUvIndexElement>;
     }
   }
-  export interface HTMLAttributes extends StencilHTMLAttributes {}
-
 }
+
+

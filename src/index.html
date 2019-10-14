@@ -1,38 +1,36 @@
 <!DOCTYPE html>
 <html dir="ltr" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0" />
+    <title>Stencil Component Starter</title>
+    <script type="module" src="/build/kwsweather.esm.js"></script>
+    <script nomodule src="/build/kwsweather.js"></script>
+  </head>
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0">
-  <title>Stencil Component Starter</title>
-  <script src="/build/kwsweather.js"></script>
-</head>
+  <body>
+    <h1>Weather Widgets</h1>
 
-<body>
-  <h1>Weather Widgets</h1>
-
-  <div class="sample">
-    <h2>Temperature</h2>
-    <div>
-      <kws-temperature temperature="273.15" scale="C"></kws-temperature>
+    <div class="sample">
+      <h2>Temperature</h2>
+      <div>
+        <kws-temperature temperature="273.15" scale="C"></kws-temperature>
+      </div>
+      <div>
+        <kws-temperature temperature="273.15" scale="F"></kws-temperature>
+      </div>
+      <div>
+        <kws-temperature temperature="290.15" scale="C"></kws-temperature>
+      </div>
+      <div>
+        <kws-temperature temperature="290.15" scale="F"></kws-temperature>
+      </div>
+      <div>
+        <kws-temperature temperature="373.15" scale="C"></kws-temperature>
+      </div>
+      <div>
+        <kws-temperature temperature="373.15" scale="F"></kws-temperature>
+      </div>
     </div>
-    <div>
-      <kws-temperature temperature="273.15" scale="F"></kws-temperature>
-    </div>
-    <div>
-      <kws-temperature temperature="290.15" scale="C"></kws-temperature>
-    </div>
-    <div>
-      <kws-temperature temperature="290.15" scale="F"></kws-temperature>
-    </div>
-    <div>
-      <kws-temperature temperature="373.15" scale="C"></kws-temperature>
-    </div>
-    <div>
-      <kws-temperature temperature="373.15" scale="F"></kws-temperature>
-    </div>
-  </div>
-
-</body>
-
+  </body>
 </html>

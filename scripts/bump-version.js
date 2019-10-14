@@ -1,6 +1,5 @@
 'use strict';
 
-const fs = require('fs');
 const packageFile = require('./packageFile');
 const semver = require('semver');
 

@@ -7,7 +7,10 @@ export const config:Config = {
       type: 'dist'
     },
     {
-      type: 'www'
+      type: 'www',
+      copy: [
+        { src: 'imgs' }
+      ]
     }
   ]
 };

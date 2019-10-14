@@ -27,9 +27,9 @@ describe('kws-condition', () => {
     const paths = {
       sunny: './imgs/sunny.png',
       cloudy: './imgs/cloudy.png',
-      lightRain: './imgs/rain.png',
+      lightRain: './imgs/light-rain.png',
       shower: './imgs/shower.png',
-      sunnyThunderStorm: './imgs/partial-tstorm.png',
+      sunnyThunderStorm: './imgs/sunny-tstorm.png',
       thunderStorm: './imgs/tstorm.png',
       fog: './imgs/fog.png',
       snow: './imgs/snow.png',
