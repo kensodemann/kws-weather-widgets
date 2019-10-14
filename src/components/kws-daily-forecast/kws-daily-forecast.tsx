@@ -51,7 +51,7 @@ export class KwsDailyForecast {
     return (
       this.forecasts &&
       this.forecasts.length &&
-      format(this.forecasts[0].date, 'ddd, MMM D, YYYY')
+      format(this.forecasts[0].date, 'EEE, MMM d, yyyy')
     );
   }
 
