@@ -1,3 +1,12 @@
+## [2.0.1](https://github.com/kensodemann/kws-weather-widgets/compare/v2.0.0...v2.0.1) (2019-10-14)
+
+
+### Bug Fixes
+
+* **config:** move the loader where it belongs ([a938149](https://github.com/kensodemann/kws-weather-widgets/commit/a938149f4096319e07dd73a138d75ae821460d5a))
+
+
+
 # 2.0.0 (2019-10-14)
 
 
