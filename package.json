@@ -2,12 +2,17 @@
   "name": "kws-weather-widgets",
   "version": "2.0.0",
   "description": "Demonstration Weather Widgets",
-  "module": "dist/index.mjs",
   "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "es2015": "dist/esm/index.mjs",
+  "es2017": "dist/esm/index.mjs",
   "types": "dist/types/components.d.ts",
   "collection": "dist/collection/collection-manifest.json",
+  "collection:main": "dist/collection/index.js",
+  "unpkg": "dist/test-comp/test-comp.js",
   "files": [
-    "dist/"
+    "dist/",
+    "loader/"
   ],
   "scripts": {
     "build": "stencil build",
