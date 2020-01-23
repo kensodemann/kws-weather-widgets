@@ -1,0 +1,51 @@
+{
+  "name": "kws-weather-widgets-react",
+  "sideEffects": false,
+  "version": "0.0.1",
+  "private": true,
+  "description": "React specific wrapper for kws-weather-widgets",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ionic-team/ionic.git"
+  },
+  "scripts": {
+    "build": "npm run clean && npm run compile",
+    "clean": "rm -rf dist",
+    "compile": "npm run tsc",
+    "tsc": "tsc -p .",
+    "rollup": "rollup -c"
+  },
+  "main": "./dist/index.cjs.js",
+  "module": "./dist/index.es.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist/"
+  ],
+  "devDependencies": {
+    "@types/jest": "~24.9.1",
+    "@types/node": "~13.5.0",
+    "@types/react": "~16.9.19",
+    "@types/react-dom": "~16.9.5",
+    "jest": "~25.1.0",
+    "jest-dom": "~4.0.0",
+    "np": "~5.2.1",
+    "react": "^16.7.0",
+    "react-dom": "^16.7.0",
+    "typescript": "^3.3.4000"
+  },
+  "dependencies": {
+    "kws-weather-widgets": "2.0.2"
+  },
+  "peerDependencies": {
+    "react": "^16.7.0",
+    "react-dom": "^16.7.0"
+  },
+  "jest": {
+    "preset": "ts-jest",
+    "setupTestFrameworkScriptFile": "<rootDir>/jest.setup.js",
+    "testPathIgnorePatterns": [
+      "node_modules",
+      "dist"
+    ]
+  }
+}
