@@ -1,3 +1,12 @@
+## [2.0.3](https://github.com/kensodemann/kws-weather-widgets/compare/v2.0.2...v2.0.3) (2020-02-14)
+
+
+### Bug Fixes
+
+* **condition:** do not default to black ([f7badf8](https://github.com/kensodemann/kws-weather-widgets/commit/f7badf8bf3656770c6198b30826f2ca9348fe261))
+
+
+
 ## [2.0.2](https://github.com/kensodemann/kws-weather-widgets/compare/v2.0.1...v2.0.2) (2019-10-14)
 
 
