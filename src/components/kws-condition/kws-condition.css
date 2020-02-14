@@ -5,5 +5,5 @@
 .condition-label {
   font-size: var(--kws-condition-label-font-size);
   font-weight: var(--kws-condition-label-font-weight);
-  color: var(--kws-font-color, #000);
+  color: var(--kws-font-color);
 }
